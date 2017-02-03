@@ -1,3 +1,4 @@
+import store from '../store';
 
 export function selectCell(index, rowIndex, row) {
   return {
@@ -15,14 +16,11 @@ export function selectRow(rowIndex) {
   }
 }
 
-export function saveChange(arr) {
-  return {
-    type: 'SAVE_CHANGE',
-    arr
-  }
+export function saveChange() {
+  const prevState = store.getState();
+  store.dispatch({type: 'SAVE_CHANGE', prevState })
 }
+
 export function clear() {
-  return {
-    type: 'CLEAR'
-  }
+   store.dispatch({type: 'CLEAR'})
 }

@@ -1,9 +1,9 @@
 function setData(state={}, action){
-	const {arr}=action;
+	const {prevState}=action;
 	
 	switch(action.type){
 		case 'SAVE_CHANGE':
-			return Object.assign({}, state, getData(state, arr))
+			return Object.assign({}, state, getData(state, prevState.arr))
 
 		default:
 			return state;

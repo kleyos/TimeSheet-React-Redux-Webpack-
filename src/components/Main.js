@@ -3,14 +3,9 @@ import Header from './Header';
 import Row from './Row';
 
 import data from '../data/data.json';
+import {saveChange, clear} from '../actions/actionCreators';
 
 class Main extends Component {
-
-  save(){
-    const arrData=this.props.arr;
-    
-    this.props.saveChange(arrData);
-  }
 
   render(){
     return (
@@ -28,8 +23,8 @@ class Main extends Component {
             />)}
 
       <p className='btn'>
-        <button className='clear' type='button' onClick={this.props.clear}> Clear </button>
-        <button className='save' type='button'  onClick={this.save.bind(this)} > Save Changes </button>
+        <button className='clear' type='button' onClick={clear}> Clear </button>
+        <button className='save' type='button'  onClick={saveChange} > Save Changes </button>
       </p>
       </div>
       );
