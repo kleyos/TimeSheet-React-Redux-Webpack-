@@ -18,8 +18,6 @@ class Main extends Component {
                   row={this.props.arr[i]}
                   st={this.props.status[i]}
                   rowIndex={i}
-                  clickCell={this.props.selectCell}
-                  clickSelectRow={this.props.selectRow} 
             />)}
 
       <p className='btn'>

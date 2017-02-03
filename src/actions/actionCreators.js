@@ -1,19 +1,11 @@
 import store from '../store';
 
 export function selectCell(index, rowIndex, row) {
-  return {
-    type: 'SELECT_CELL',
-    index,
-    rowIndex,
-    row
-  }
+  store.dispatch( {type: 'SELECT_CELL', index, rowIndex, row} )
 }
 
 export function selectRow(rowIndex) {
-  return {
-    type: 'SELECT_ROW',
-    rowIndex
-  }
+  store.dispatch( {type: 'SELECT_ROW', rowIndex} )
 }
 
 export function saveChange() {

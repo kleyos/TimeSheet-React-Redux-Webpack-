@@ -1,16 +1,16 @@
 
 import React, {Component} from 'react';
-
+import {selectCell} from '../actions/actionCreators';
 
 class Cell extends Component {
 
 	handleClick(){
-		this.props.clickCell(this.props.index, this.props.rowIndex, this.props.row);
+		selectCell(this.props.index, this.props.rowIndex, this.props.row);
 	}
 
 	selectCell(e){
 		if (e.buttons === 1){
-			this.props.clickCell(this.props.index, this.props.rowIndex, this.props.row);
+			selectCell(this.props.index, this.props.rowIndex, this.props.row);
 		} 
 	}
 	
