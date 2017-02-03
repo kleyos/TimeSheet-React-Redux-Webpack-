@@ -3,9 +3,10 @@ function setArr(state=[], action){
 	
 	switch(action.type){
 		case 'SELECT_CELL':
+			const newState = [...state]
+			newState[rowIndex][index] = !newState[rowIndex][index];
 			
-			state[rowIndex][index]= !state[rowIndex][index]
-			return [...state];
+			return newState;
 		
 		case 'SELECT_ROW':
 			

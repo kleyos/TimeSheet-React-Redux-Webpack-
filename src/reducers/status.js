@@ -5,6 +5,7 @@ function setStatus(state=[], action){
 		case 'SELECT_CELL':
 			let newState;
 			row.every(i => i===true) ? (newState=true) : (newState=false)
+
 			return 	[
 					...state.slice(0,rowIndex),
 					...state[rowIndex], newState,
